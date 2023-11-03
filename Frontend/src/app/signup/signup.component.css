@@ -1,0 +1,12 @@
+
+  .container{
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid black;
+    width: fit-content;
+  }
+ 
+
+  

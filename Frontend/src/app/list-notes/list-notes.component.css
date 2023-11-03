@@ -1,0 +1,59 @@
+/* Custom CSS for note cards */
+.note-card {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .note-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border: 1px solid #0c0c0c;
+  }
+  
+  .card-title {
+    color: #121212;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+  }
+  
+  .card-text {
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Optional: Add animation for hover effect */
+  .note-card:hover .card-body {
+    transition: background-color 0.2s ease;
+    background-color: #cacbcc;
+    color: #fff;
+  }
+  
+  .btn-primary,
+.btn-outline-dark {
+  font-size: 20px; 
+  border-width: 2px; 
+}
+
+.product-title {
+  font-weight: bold;
+  font-size: 2.3rem;
+  margin: 0;
+  color: rgb(10, 10, 10);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.btn-primary,
+.btn-outline-dark {
+  font-size: 20px; 
+  border-width: 2px; 
+  
+}
+

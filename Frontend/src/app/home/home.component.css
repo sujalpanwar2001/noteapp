@@ -1,0 +1,90 @@
+/* Global Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+.header {
+  background-color: rgb(16, 144, 236);
+  padding: 1rem;
+  color: white;
+}
+
+.product-title {
+  font-weight: bold;
+  font-size: 2.3rem;
+  margin: 0;
+  color: rgb(10, 10, 10);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Custom Button Styles */
+.btn-primary,
+.btn-outline-dark {
+  font-size: 20px; 
+  border-width: 2px; 
+}
+
+/* Main Container Styles */
+.main-container {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Heading and Lead Styles */
+.heading {
+  font-weight: bold;
+  font-size: 2.5rem; 
+  text-decoration: dotted;
+  color: #0daac6;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.lead {
+  font-weight: bold;
+  font-size: 2rem; 
+  color: #333;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+/* Hover styles */
+.community-section:hover .heading {
+  color: #ff0000; 
+}
+
+.community-section:hover .lead {
+  color: #777; 
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for fadeInUp elements */
+.container2 {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+
+.regs{
+  margin-left: 30px;
+}

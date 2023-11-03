@@ -1,0 +1,50 @@
+<div class="header py-4" style="background-color: rgb(17, 74, 196);">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-5 col-md-1 d-flex align-items-start justify-content-center">
+        <div class="d-flex flex-column align-items-center">
+          <div *ngIf="loggedIn()">
+            <div><a class="welcome-text" style="white-space: nowrap; text-decoration: none; font-size: 28px; color: black;">Welcome {{ currentUser().firstName }}</a></div>
+          </div>
+        </div>
+      </div>
+      <h3 class="product-title">Note App</h3>
+      <div class="col-6 col-md-1 text-end">
+        <div *ngIf="loggedIn()">
+          <button class="btn btn-primary" type="button" (click)="logout()">Logout</button>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h2>Create a Note</h2>
+        </div>
+        <div class="card-body">
+          <form (submit)="createNote(addPostForm)" #addPostForm="ngForm">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title:</label>
+              <input type="text" class="form-control" id="title" name="title" [(ngModel)]="noteData.title" required>
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description:</label>
+              <textarea id="description" class="form-control" name="description" [(ngModel)]="noteData.description" required></textarea>
+              <div *ngIf="noteData.description.length > 500 || specialCharactersInvalid" class="text-danger">
+                {{ noteData.description.length > 500 ? 'Maximum of 500 characters allowed.' : 'Invalid special character used. Allowed special characters are [@, ; & * + -].' }}
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary " [disabled]="addPostForm.invalid || noteData.description.length > 500 || specialCharactersInvalid">Create Note</button>
+            <button routerLink="/listnotes" class="btn btn-secondary crnote">Show Notes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
